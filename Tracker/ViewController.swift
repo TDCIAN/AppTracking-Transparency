@@ -24,12 +24,16 @@ class ViewController: UIViewController {
         ATTrackingManager.requestTrackingAuthorization { status in
             switch status {
             case .notDetermined:
+                print("Not determined")
                 break
             case .restricted:
+                print("Restricted")
                 break
             case .denied:
+                print("Denied")
                 break
             case .authorized:
+                print("Allowed")
                 break
             @unknown default:
                 break
